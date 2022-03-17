@@ -1,0 +1,126 @@
+할당연산자
+assignment
+variable(변수)=expression
+                  constoaf
+                  operator
+                  function
+제일 간단함 sum <- n + n;
+
+분석 4종류
+최악경우 분석
+평균경우 분석
+최선경우 분석
+생각분석
+
+알고리즘 수행시간의 접근 표기법
+- 수행 시간은 알고리즘이 수행하는 기본 연산 횟수를 입력 크기에 대한 함수로 표현
+
+O (Big oh) - 표기법
+다항식에서 최고 차수 항만을 취한 뒤 그 항의 계수를 제거
+O(1) 상수시간
+O(LogN) 로그(대수)시간
+O(N) 선형시간
+O(NLogN) 로그선형시간
+O(N의 2승) 제곱시간
+O(N의 3승) 세제곱시간
+O(2의 N승)  지수시간
+한 가지 문제를 여러 방법으로 해결할 수 있음
+
+DATA TYPE
+java기준
+Priative 
+-boolean
+-char
+-byte
+-short
+-int
+-long
+-float
+-double
+Reference 
+-class == AAA abc = new AAA();
+-interface
+-array
+
+추상 데이터 타입 : 데이터 타입을 만들 때 비슷한 것들을 규정해 놓은 것
+
+자료 구조: 자료를 효율적으로 사용하기 위해서 자료의 특성에 따라서 분류하여 구상하고 저장 및 처리하는 모든 작업
+
+컴퓨터 분야에서 자료구조를 배우는 이유
+- 컴퓨터는 사람이 원하는 것을 알아서 처리할 수 없음
+
+정답은 하나만 있는게 아니다
+
+recursive 재귀, 자기호출
+반복문
+public class DataType {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 1;
+		for (int i =1; i <30; i+=3) {
+		System.out.print(i+" ");
+		}
+		
+
+	}
+	
+}
+재귀
+public class DataType {
+	public static int seq(int n) {
+		if(n == 1)
+			return 1;
+		else
+			return seq(n-1) + 3;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for(int i = 1; i <= 10; i++) {
+			System.out.print(seq(i) + "    ");
+		}
+		
+
+	}
+	
+}
+
+public class DataType {
+	public static void A(int n) {
+		if(n > 0)
+			System.out.println(n);
+			A(n-1);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x = 3;
+		A(3);
+		}
+		
+
+	}
+	
+
+public class DataType {
+	public static long tact1(int n) {
+		int tmp = 1;
+		for (int i = 2; i <= n; i++) {
+			tmp = i*tmp;
+		}
+		return tmp;
+	}
+	public static long tact2(int n) {
+		if(n==0)
+			return 1;
+		else
+			return n * tact2(n-1);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(tact1(5));
+		System.out.println(tact2(5));
+		}
+		
+
+	}
+	
