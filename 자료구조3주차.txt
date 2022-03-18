@@ -1,0 +1,23 @@
+Source에 있는 Generate constructor using field로 생성자를 만들 수 있다. 비슷한 생성자가 두개가 있을 경우 중복이 된다. get은 받는거고 set은 설정하는 것이다.
+refector로 rename하면 전체적으로 다 바뀐다.
+static을 붙이면 객체를 만들 필요가 없이 실행된다.
+main 메소드는 static이기 때문에 일반 메소드는 실행할 수 없다.
+
+실행순서
+if switch
+for while
+do-while
+
+break
+continue
+return
+
+	Scanner sc = new Scanner(System.in);
+		String name;
+		name = sc.next();
+		if(name == "홍길동")
+			System.out.println("홍길동이 맞습니다.");
+		else
+			System.out.println("홍길동이 아닙니다");
+위와 같은 코드를 C#에서 실행하고 홍길동을 입력하면 홍길동이 맞다고 뜨고 자바에선 아니라고 뜬다.
+위에 if문을 if(name.equals("홍길동"))로 수정하면 정상적으로 작동한다.
